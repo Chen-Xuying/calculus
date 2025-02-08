@@ -1,0 +1,70 @@
+% document configurations
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+
+% document metadata
+\newcommand{\headertitle}{Proof Basics}
+\newcommand{\weeknumber}{1}
+\newcommand{\duedate}{2025/2/9}
+
+% fancyhdr configurations
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhead[L]{\bfseries\headertitle}
+\fancyhead[R]{\bfseries Week \weeknumber: Due \duedate}
+
+% amsthm configurations
+\usepackage{amsthm}
+\setcounter{section}{\weeknumber}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem*{reading}{Reading}
+
+
+\begin{document}
+
+\begin{reading}
+    Section 1.8 from \textit{Calculus: One and Several Variables}.
+\end{reading}
+
+\begin{problem}
+    Section 1.8, Exercise 1.
+\end{problem}
+
+\begin{theorem}\label{Dummy1}
+    If it is raining, then the ground is wet.
+\end{theorem}
+
+\begin{problem}
+    Given Theorem \ref{Dummy1},
+    \begin{enumerate}
+        \item Write the negation of \ref{Dummy1}. Is it true?
+        \item Write the converse of \ref{Dummy1}. is it true?
+        \item Write the contrapositive of \ref{Dummy1}. Is it true?
+    \end{enumerate}
+\end{problem}
+
+\begin{theorem}\label{Dummy2}
+    A number is even if and only if it is divisible by 2.
+\end{theorem}
+
+\begin{problem}
+    Given Theorem \ref{Dummy2}, 
+    \begin{enumerate}
+        \item Are \textit{being even} and \textit{being divisible by 2} equivalent?
+        \item In general, given \textit{A if and only if B}, are A and B equivalent?
+    \end{enumerate}
+\end{problem}
+
+\begin{problem}[Bonus]
+    Using induction, show that
+    $$
+    1+2+\cdots+n = \frac{n(n+1)}{2}
+    $$
+    Make sure to specify the \textbf{Base case}, \textbf{Inductive step}, and \textbf{Conclusion}.
+\end{problem}
+
+\end{document}
