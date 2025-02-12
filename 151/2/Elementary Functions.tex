@@ -20,8 +20,10 @@
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
 \newtheorem{problem}[theorem]{Problem}
 \newtheorem*{reading}{Reading}
+\newtheorem*{recall}{Recall}
 
 
 \begin{document}
@@ -30,5 +32,32 @@
     Section 1.5-1.7 from \textit{Calculus: One and Several Variables}.
 \end{reading}
 
+Recall from week 1 where we introduced \textit{if-then} statements and \textit{iff} statements. Here we will give a more rigorous definition of \textit{if-then} statements, and use the definition to discuss and edge case of the \textit{if-then} statement where the conditional is always false.
+
+\begin{definition}
+    Statement \textit{If A then B} is equivalent to \textit{Not(A and Not(B))}.
+\end{definition}
+
+\begin{theorem}\label{Dummy}
+    If it is raining, then the ground is wet.
+\end{theorem}
+
+\begin{problem}
+    Write \ref{Dummy} in its equivalent form, using everyday language.\\
+    \textit{Hint: Not() can be written as 'It can't be the case that\dots'}
+\end{problem}
+
+\begin{theorem}\label{True}
+    If 1+1=3, then triangles have 4 sides.
+\end{theorem}
+
+\begin{problem}
+    Denote $A$ as \textit{1+1=3}, and $B$ as \textit{triangles have 4 sides}.
+    \begin{enumerate}
+        \item Write \textit{Not(B)}. Is it true?
+        \item Write \textit{A and Not(B)}. Is it true?
+        \item Write \ref{True} using without using the \textit{if-then} format. Is it true?
+    \end{enumerate}
+\end{problem}
 
 \end{document}
