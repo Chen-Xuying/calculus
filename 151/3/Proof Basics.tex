@@ -1,0 +1,78 @@
+% document configurations
+\documentclass[letterpaper, 12pt]{article}
+\usepackage[margin=1in]{geometry}
+
+% document metadata
+\newcommand{\headertitle}{Limit}
+\newcommand{\weeknumber}{3}
+\newcommand{\duedate}{2025/3/30}
+
+% fancyhdr configurations
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\fancyhead[L]{\bfseries\headertitle}
+\fancyhead[R]{\bfseries Week \weeknumber: Due \duedate}
+
+% amsthm configurations
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\setcounter{section}{\weeknumber}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem*{reading}{Reading}
+\newtheorem*{remark}{Remark}
+\newtheorem*{hint}{Hint}
+
+
+\begin{document}
+
+\begin{reading} This week's topic would concern the concept of {\it limit}.
+    \begin{itemize}
+        \item Quickly skim through 2.1 for the intuition.
+        \item Read Section 2.2 and 2.3. You should pay close attention to the theorem proofs, so that when you write your own, you know the correct style and best practices.
+    \end{itemize}
+\end{reading}
+
+\begin{problem}
+    The $\epsilon-\delta$ formulation of limit is a very, if not the most, critical tool throughout the rest of the course. Re-read definition 2.2.1, and rewrite the definition in your own words (that is, you can use the variables $\epsilon$ and $\delta$, but no mathematical equations or inequalities).
+\end{problem}
+
+\begin{hint} For Problem 3.1,
+    \begin{itemize}
+        \item A 'neighbourhood' around $c$ of size $\delta$ is the open interval $(c-\delta, c+\delta)$.
+        \item Consider a 'sufficiently small neighbourhood' around $c$. What can we say about the image of this small neighbourhood?
+        \item (Optional) I understand the $\epsilon-\delta$ formulation like a sort of game: you give me an arbitrary $\epsilon$, and if I can find a $\delta$ that 'beats' your $\epsilon$, I win. This hint is just my way to understand the concept; if you have your own formulation I encourage you to use your own one.
+    \end{itemize}
+\end{hint}
+
+\begin{problem}
+    Exercises from the textbook:
+    \begin{itemize}
+        \item Section 2.2: 45, 46.
+        \item Section 2.3: 4, 13-18, 43.
+    \end{itemize}
+\end{problem}
+
+\begin{problem}
+    Use the $\epsilon-\delta$ formulation to rigorously prove Theorem 2.2.9.
+\end{problem}
+
+\begin{problem}
+    Plot function $f(x) = sin(\frac{1}{x})$. Show that $f$ does not have a limit at 0.
+\end{problem}
+
+\begin{problem}[Bonus]
+    Let $f$ be defined on all $\mathbb{R}$. Is it possible that $f$ does not have a limit at every single point?
+\end{problem}
+\begin{hint}
+    You are encouraged to give the problem a few attempts. The answer is notoriously unintuitive, so if you can't figure it out after a few tries, search for keyword 'Dirichlet function.' Prove that the function does not have limit at any point.
+\end{hint}
+\begin{remark}
+    This is your first encounter with a {\it pathological example}. Pathological examples are counter-intuitive by design. You are encouraged to remember $sin(\frac{1}{x})$ and the Dirichlet function, as they can become very handy counterexamples in future proofs and problems. By the end of this course you should have your own toolbox of pathological examples to check doubtful hypothesis against.
+\end{remark}
+
+\end{document}
